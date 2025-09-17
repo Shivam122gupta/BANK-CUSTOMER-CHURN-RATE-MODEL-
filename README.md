@@ -1,42 +1,45 @@
-# 🏦 Customer Churn Prediction
+# Bank Customer Churn Prediction
 
-This project predicts whether a bank customer will exit (churn) or stay, based on demographic and financial features.  
-The dataset used is **Churn_Modelling.xls**.
-
----
-
-## 📂 Dataset
-- **Rows**: 10,000 customers  
-- **Columns**: 14  
-- **Target Variable**: `Exited` (0 = Not Churned, 1 = Churned)  
-- **Features** include:
-  - Customer demographics (Age, Gender, Geography)
-  - Account information (CreditScore, Balance, Tenure, Estimated Salary)
-  - Customer activity (Number of Products, HasCrCard, IsActiveMember)
+This project predicts **customer churn** (whether a bank’s customer will leave or stay) using machine learning models.  
+It is based on the dataset from Kaggle:  
+👉 [Predicting Churn for Bank Customers](https://www.kaggle.com/datasets/adammaus/predicting-churn-for-bank-customers)
 
 ---
 
-## 🛠️ Technologies Used
-- **Python 3**
-- **Pandas, NumPy** (Data Handling)
-- **Matplotlib, Seaborn** (Data Visualization)
-- **Scikit-learn** (Machine Learning: Logistic Regression, Random Forest, etc.)
-- **XGBoost** (Advanced Classification)
+## 📊 Dataset
+- Source: Kaggle (Adammaus – Predicting Churn for Bank Customers)
+- Features include: `CustomerId`, `CreditScore`, `Geography`, `Gender`, `Age`, `Balance`, `NumOfProducts`, `HasCrCard`, `IsActiveMember`, `EstimatedSalary`
+- Target variable: `Exited` (1 → churned, 0 → retained)
 
 ---
 
-## 📊 Workflow
-1. **Data Preprocessing**
-   - Handling categorical variables (Geography, Gender → One-Hot Encoding)
-   - Scaling features using StandardScaler
-   - Train-test split
+## 🔍 Project Workflow
+1. **Data Loading & Exploration**
+   - Read dataset
+   - Checked missing values
+   - Performed feature inspection and visualization
 
-2. **Model Training**
-   - Logistic Regression
-   - Random Forest Classifier
-   - XGBoost Classifier
+2. **Preprocessing**
+   - Handled categorical variables with encoding
+   - Handled missing values
+   - Feature scaling
 
-3. **Model Evaluation**
-   - Accuracy Score
-   - Confusion Matrix
-   - ROC-AUC Curve
+3. **Model Building**
+   - Implemented multiple ML models including:
+     - Logistic Regression
+     - Random Forest
+     - XGBoost
+   - Compared results using:
+     - Accuracy
+     - Precision
+     - Recall
+     - F1-score
+
+4. **Evaluation**
+   - Created summary table of model performances
+   - Selected the best performing model
+
+---
+
+## ⚡ Current Issue (Work in Progress)
+While running XGBoost, an error occurs:  
